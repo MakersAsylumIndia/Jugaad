@@ -1,0 +1,111 @@
+.archive .hentry:first-of-type,
+.blog .hentry:first-of-type,
+.search .hentry:first-of-type {
+  margin-top: 0;
+}
+
+.home .site-content-inner .hentry .entry-meta,
+.home .site-content-inner .hentry .entry-header,
+.home .site-content-inner .hentry .entry-summary,
+.page-read .site-content-inner .hentry .entry-meta,
+.pade-read .site-content-inner .hentry .entry-header,
+.page-read .site-content-inner .hentry .entry-summary,
+.archive .site-content-inner .hentry .entry-meta,
+.archive .site-content-inner .hentry .entry-header,
+.archive .site-content-inner .hentry .entry-summary {
+  @include pad();
+}
+
+.home .content-area .type-post .entry-meta .cat-links a,
+.page .content-area .type-post .entry-meta .cat-links a,
+.body .content-area .type-post .entry-meta .cat-links a,
+.single-post .entry-hero .entry-meta .cat-links a {
+  color: $read;
+  text-shadow: none;
+}
+.content-area .type-jugaad_tutorials .entry-meta .cat-links a,
+.single-jugaad_tutorials .entry-hero .entry-meta a {
+  color: $do;
+  text-shadow: none;
+}
+.content-area .type-jugaad_events .entry-meta .cat-links a,
+.single-jugaad_events .entry-hero .entry-meta a {
+  color: $go;
+  text-shadow: none;
+}
+
+.home .content-area .format-standard a.post-thumbnail,
+.page-read .content-area .format-standard a.post-thumbnail,
+.archive .content-area .format-standard a.post-thumbnail {
+  @include fill-parent;
+  margin: 0;
+  height: 175px;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.home .content-area .format-standard.has-post-thumbnail .entry-header,
+.page-read .content-area .format-standard.has-post-thumbnail .entry-header,
+.archive .content-area .format-standard.has-post-thumbnail .entry-header {
+  display: block;
+  @include fill-parent;
+  @include pad();
+}
+
+.home .content-area .format-standard.has-post-thumbnail .entry-header .entry-title,
+.page-read .content-area .format-standard.has-post-thumbnail .entry-header .entry-title,
+.archive .content-area .format-standard.has-post-thumbnail .entry-header .entry-title {
+  font-size: 1.2rem;
+  height: 44px;
+}
+
+.home .content-area .format-standard.has-post-thumbnail .entry-summary p,
+.page-read .content-area .format-standard.has-post-thumbnail .entry-summary p,
+.post-type-archive-jugaad_tutorials .content-area .format-standard.has-post-thumbnail .entry-summary p {
+  height: 96px;
+  overflow: hidden;
+}
+
+.post-type-archive-jugaad_events .content-area .format-standard.has-post-thumbnail .entry-summary h4 {
+  margin: 0;
+}
+
+.post-type-archive-jugaad_events .content-area .format-standard.has-post-thumbnail .entry-summary p {
+  margin-bottom: 5px;
+}
+
+.home .site-content-inner .hentry .entry-meta,
+.page-read .site-content-inner .hentry .entry-meta,
+.archive .site-content-inner .hentry .entry-meta {
+  line-height: 1.5;
+}
+
+.home .site-content-inner .hentry .entry-meta span,
+.page-read .site-content-inner .hentry .entry-meta span,
+.archive .site-content-inner .hentry .entry-meta span {
+  font-size: 0.6rem;
+}
+
+.home .site-content-inner .hentry .entry-meta span.comments-link,
+.page-read .site-content-inner .hentry .entry-meta span.comments-link,
+.archive .site-content-inner .hentry .entry-meta span.comments-link {
+  display: none;
+}
+
+.home .site-content-inner .sidebar-toggle {
+  display: none;
+}
+
+.jp-relatedposts {
+  @include fill-parent();
+  @include pad(default 0);
+}
+
+.jp-relatedposts * {
+  font-family: $base-font-family;
+}
+
+.jp-relatedposts h3,
+.jp-relatedposts h4 {
+  font-family: $heading-font-family;
+}

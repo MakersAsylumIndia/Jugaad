@@ -1,0 +1,120 @@
+/*--------------------------------------------------------------
+# Featured Content
+--------------------------------------------------------------*/
+.featured-content {
+  @include pad(default 0);
+}
+.featured-content-inner {
+  @include fill-parent;
+}
+.blog .featured-content .hentry {
+  margin-bottom: 1.16509%;
+}
+.blog .featured-content .hentry:first-of-type {
+  @include media(min-width $pc-standard) {
+    @include span-columns(16 of 24);
+  }
+}
+.blog .featured-content .hentry:nth-of-type(2) {
+  @include media(min-width $ipad) {
+    @include span-columns(12 of 24);
+  }
+  @include media(min-width $pc-standard) {
+    @include span-columns(8 of 24);
+    @include omega();
+  }
+  @include media(min-width $pc-hd) {
+    margin-left: 0;
+  }
+  @include media(min-width $pc-widescreen) {
+    margin-left: 0;
+  }
+}
+.blog .featured-content .hentry:nth-of-type(3) {
+  @include media(min-width $ipad) {
+    @include span-columns(12 of 24);
+    @include omega();
+  }
+  @include media(min-width $pc-standard) {
+    @include span-columns(8 of 24);
+    margin-left: 0;
+  }
+  @include media(min-width $pc-hd) {
+    @include omega();
+  }
+  @include media(min-width $pc-widescreen) {
+    @include omega();
+  }
+}
+.blog .featured-content .hentry:nth-of-type(4) {
+  @include media(min-width $ipad) {
+    @include span-columns(12 of 24);
+  }
+  @include media(min-width $pc-standard) {
+    @include span-columns(8 of 24);
+  }
+  @include media(min-width $pc-hd) {
+    @include calc(margin-top, "-340px + 1.86509%");
+  }
+  @include media(min-width $pc-widescreen) {
+    @include calc(margin-top, "-340px + 1.66509%");
+  }
+  @include media(min-width 1380px) {
+    @include calc(margin-top, "-340px + 6.99909%");
+  }
+}
+.blog .featured-content .hentry:nth-of-type(5) {
+  @include media(min-width $ipad max-width $pc-standard) {
+    @include span-columns(12 of 24);
+    @include omega();
+  }
+  @include media(min-width $pc-standard) {
+    @include span-columns(8 of 24);
+  }
+  @include media(min-width $pc-standard max-width $pc-widescreen) {
+    @include omega();
+  }
+  @include media(min-width $pc-hd) {
+    margin-left: 33.72122807%;
+    @include calc(margin-top, "-340px + 1.86509%");
+  }
+  @include media(min-width $pc-widescreen) {
+    margin-left: 33.72122807%;
+    @include calc(margin-top, "-340px + 1.66509%");
+  }
+  @include media(min-width 1380px) {
+    @include calc(margin-top, "-340px + 6.99909%");
+  }
+}
+.blog .featured-content .hentry {
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 5px grey;
+}
+.featured-content .entry-header {
+  padding: 0px 30px 0px 30px;
+}
+.featured-content .entry-meta,
+.featured-content .entry-title {
+  padding-left: 0;
+  padding-right: 0;
+}
+.featured-content .entry-header .cat-links {
+  padding: 4px 6px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.featured-content .type-post .entry-header .cat-links {
+  background: #1F849F;
+  border-color: #1F849F;
+}
+.featured-content .type-jugaad_tutorials .entry-header .cat-links {
+  background: #FFC036;
+  border-color: #FFC036;
+}
+.featured-content .type-jugaad_events .entry-header .cat-links {
+  background: #009F5E;
+  border-color: #009F5E;
+}
+.featured-content .entry-author {
+  font-size: 0.7rem;
+}

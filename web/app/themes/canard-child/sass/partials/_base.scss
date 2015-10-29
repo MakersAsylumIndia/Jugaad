@@ -1,0 +1,31 @@
+body {
+  background: #eee;
+}
+
+.site-content {
+  @include media(min-width $ipad) {
+    $max-width: em(648);
+    @include outer-container($max-width);
+  }
+  @include media(min-width $pc-standard) {
+    $max-width: em(840);
+    @include outer-container($max-width);
+  }
+  @include media(min-width $pc-hd) {
+    $max-width: em(960);
+    @include outer-container($max-width);
+  }
+  @include media(min-width $pc-widescreen) {
+    $max-width: em(1140);
+    @include outer-container($max-width);
+  }
+  @include media(min-width 1380px) {
+    @include outer-container(1140px);
+  }
+}
+
+.clear:after {
+  content: " ";
+  display: table;
+  clear: both;
+}

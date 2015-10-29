@@ -1,0 +1,221 @@
+.site-content-inner {
+  @include row();
+  @include pad(default 0);
+  @include span-columns(12);
+  @include media(max-width $ipad) {
+    @include pad();
+  }
+  @include media(min-width $ipad) {
+    @include fill-parent;
+  }
+  @include media(min-width $pc-standard) {
+    @include fill-parent;
+  }
+  @include media(min-width $pc-hd) {
+    @include fill-parent;
+  }
+  @include media(min-width $pc-widescreen) {
+    @include fill-parent;
+  }
+  @include media(min-width 1380px) {
+    @include fill-parent;
+  }
+}
+
+/*Home*/
+.home .site-content-inner {
+  .content-area {
+    @include media(min-width $pc-standard) {
+      @include span-columns(8 of 12);
+      @include pad(0);
+    }
+    .site-main {
+      border: 0;
+      @include span-columns(8 of 8);
+      @include media(max-width $small-landspace) {
+        @include pad(0);
+      }
+      @include media(min-width $tablet) {
+        @include pad(0);
+      }
+      @include media(min-width $pc-standard) {
+        @include pad(0);
+        @include fill-parent;
+      }
+      .hentry {
+        @include media(min-width $tablet) {
+          @include span-columns(4 of 8);
+          @include omega(2n);
+          margin-top: 0;
+          margin-bottom: 2.35765%;
+          height: 420px;
+        }
+        background: white;
+        padding: 0;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 2px;
+      }
+    }
+  }
+  .widget-area {
+    @include media(min-width $pc-standard) {
+      @include span-columns(4 of 12);
+      @include omega();
+      @include pad(0 0 0 default);
+      margin: 0;
+      border: 0;
+    }
+    aside {
+      @include fill-parent;
+      background: white;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      border-radius: 2px;
+      margin-bottom: 40px;
+      @include pad(20px);
+    }
+  }
+}
+
+/* Page and Archive */
+.page-read .site-content-inner,
+.archive .site-content-inner {
+  .content-area {
+    @include media(min-width $pc-standard) {
+      @include span-columns(12);
+      @include omega();
+    }
+    .site-main {
+      @include fill-parent;
+      @include pad(0);
+      border: 0;
+      .hentry {
+        background: white;
+        @include media(min-width $tablet max-width $pc-standard) {
+          @include span-columns(6);
+          @include omega(2n);
+          margin-top: 0;
+          margin-bottom: 2.35765%;
+          height: 420px;
+        }
+        @include media(min-width $pc-standard) {
+          @include span-columns(4);
+          @include omega(3n);
+          margin-top: 0;
+          margin-bottom: 2.35765%;
+          height: 420px;
+        }
+        padding: 0;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+/* Blog */
+.single,
+.page-contributors {
+  .entry-hero {
+    @include media(min-width $small-potrait max-width $pc-standard) {
+      @include span-columns(12);
+      @include pad();
+      position: static;
+      margin: 0;
+    }
+    @include media(min-width $pc-standard) {
+      @include span-columns(8 of 12);
+      @include pad(default default 0 default);
+      position: static;
+      margin: 0;
+    }
+    .entry-header-wrapper {
+      position: static;
+      background: none;
+      @include pad(0 0 5px 0);
+      .entry-header-inner {
+        @include fill-parent;
+        h1 {
+          @include media(min-width $small-potrait max-width $ipad) {
+            font-size: 1.5rem;
+          }
+          color: #1B1B1B;
+          text-shadow: none;
+        }
+      }
+    }
+    .single-excerpt {
+      margin: 0;
+      @include pad(0 0 5px 0);
+      font-style: italic;
+    }
+  }
+  .site-content-inner {
+    .content-area {
+      @include media(min-width $small-potrait max-width $pc-standard) {
+        @include span-columns(12);
+        @include pad();
+      }
+      @include media(min-width $pc-standard) {
+        @include span-columns(8 of 12);
+      }
+      .site-main {
+        @include fill-parent;
+        @include pad(0);
+        border: 0;
+        .hentry {
+          background: white;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          border-radius: 2px;
+          @include fill-parent;
+          @include pad();
+          .post-thumbnail {
+            background: none;
+            @include pad(0 0 default 0);
+            img {
+              margin: 0 auto;
+            }
+          }
+          img {
+            @include media(min-width $small-potrait max-width $ipad) {
+              @include fill-parent;
+              margin: 5px 0;
+            }
+          }
+          img.alignright,
+          img.alignleft {
+            margin: 0;
+            @include pad();
+          }
+        }
+        .comments-area {
+          background: white;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          border-radius: 2px;
+          @include fill-parent;
+          @include pad();
+          margin: 0;
+        }
+      }
+    }
+    .widget-area {
+      border: 0;
+      margin: 0;
+      @include media(max-width $pc-standard) {
+        display: none;
+      }
+      @include media(min-width $pc-standard) {
+        @include span-columns(4);
+      }
+      @include pad(0);
+      .author-info,
+      aside {
+        background: white;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 2px;
+        @include fill-parent;
+        margin: 0;
+        @include pad(default);
+      }
+    }
+  }
+}
