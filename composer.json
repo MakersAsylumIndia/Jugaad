@@ -37,6 +37,7 @@
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.3.1",
+    "wpackagist-theme/canard": "^1.0.6",
     "wpackagist-plugin/akismet": "^3.1.5",
     "wpackagist-plugin/easy-author-image": "^1.5",
     "wpackagist-plugin/yikes-inc-easy-mailchimp-extender": "^6.0.2.4",
@@ -46,7 +47,8 @@
     "wpackagist-plugin/wordpress-importer": "^0.6.1",
     "afragen/github-updater": "^5.2",
     "wp-sync-db/wp-sync-db": "dev-master",
-    "wp-sync-db/wp-sync-db-media-files": "^1.1"
+    "wp-sync-db/wp-sync-db-media-files": "^1.1",
+    "roots/soil": "^3.5"
   },
   "extra": {
     "installer-paths": {
