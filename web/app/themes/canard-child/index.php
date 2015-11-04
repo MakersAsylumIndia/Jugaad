@@ -23,33 +23,33 @@ get_header(); ?>
 	<div class="site-content-inner">
 		<div id="primary" class="content-area clear">
 			<main id="main" class="site-main clear" role="main">
-			<?php global $wp_query; ?>
-			<?php $args = array_merge( $wp_query->query_vars, array( 'post_type' => array('post', 'jugaad_tutorials') ) ); ?>
-			<?php query_posts( $args ); ?>
-			<?php if ( have_posts() ) : ?>
+			<?php
+        global $wp_query;
+  			$args = array_merge( $wp_query->query_vars, array( 'post_type' => array('post', 'jugaad_tutorials') ) );
+  			query_posts( $args );
+  			if ( have_posts() ) :
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+  				/* Start the Loop */
+  				while ( have_posts() ) : the_post();
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
+  					/* Include the Post-Format-specific template for the content.
+  					 * If you want to override this in a child theme, then include a file
+  					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+  					 */
+  					get_template_part( 'content', get_post_format() );
 
-				<?php endwhile; ?>
+  				endwhile;
 
-				<?php wp_reset_query(); ?>
+  				wp_reset_query();
 
-				<?php the_posts_navigation(); ?>
+  				the_posts_navigation();
 
-			<?php else : ?>
+  			else :
 
-				<?php get_template_part( 'content', 'none' ); ?>
+  				get_template_part( 'content', 'none' );
 
-			<?php endif; ?>
+  			endif;
+      ?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

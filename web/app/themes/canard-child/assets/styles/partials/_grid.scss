@@ -1,6 +1,5 @@
 .site-content-inner {
   @include row();
-  @include pad(default 0);
   @include span-columns(12);
   @include media(max-width $ipad) {
     @include pad();
@@ -50,9 +49,7 @@
           margin-bottom: 2.35765%;
           height: 420px;
         }
-        background: white;
         padding: 0;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
         border-radius: 2px;
       }
     }
@@ -67,8 +64,6 @@
     }
     aside {
       @include fill-parent;
-      background: white;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
       border-radius: 2px;
       margin-bottom: 40px;
       @include pad(20px);
@@ -105,7 +100,6 @@
           height: 420px;
         }
         padding: 0;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
         border-radius: 2px;
       }
     }
@@ -113,64 +107,58 @@
 }
 
 /* Blog */
-.single,
-.page-contributors {
-  .entry-hero {
-    @include media(min-width $small-potrait max-width $pc-standard) {
-      @include span-columns(12);
-      @include pad();
-      position: static;
-      margin: 0;
-    }
-    @include media(min-width $pc-standard) {
-      @include span-columns(8 of 12);
-      @include pad(default default 0 default);
-      position: static;
-      margin: 0;
-    }
-    .entry-header-wrapper {
-      position: static;
-      background: none;
-      @include pad(0 0 5px 0);
-      .entry-header-inner {
-        @include fill-parent;
-        h1 {
-          @include media(min-width $small-potrait max-width $ipad) {
-            font-size: 1.5rem;
-          }
-          color: #1B1B1B;
-          text-shadow: none;
-        }
-      }
-    }
-    .single-excerpt {
-      margin: 0;
-      @include pad(0 0 5px 0);
-      font-style: italic;
-    }
-  }
-  .site-content-inner {
-    .content-area {
+.single {
+  .site-content {
+    @include outer-container;
+    .entry-hero {
       @include media(min-width $small-potrait max-width $pc-standard) {
-        @include span-columns(12);
+        @include fill-parent;
         @include pad();
+        position: static;
+        margin: 0;
       }
       @include media(min-width $pc-standard) {
-        @include span-columns(8 of 12);
+        @include span-columns(8);
+        @include pad(default 0 0 0);
+        position: static;
+        margin: 0;
       }
-      .site-main {
-        @include fill-parent;
-        @include pad(0);
-        border: 0;
-        .hentry {
-          background: white;
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-          border-radius: 2px;
+      .entry-header-wrapper {
+        position: static;
+        background: none;
+        @include pad(0 0 5px 0);
+        .entry-header-inner {
           @include fill-parent;
+          h1 {
+            @include media(min-width $small-potrait max-width $ipad) {
+              font-size: 1.5rem;
+            }
+            color: #1B1B1B;
+            text-shadow: none;
+          }
+        }
+      }
+      .single-excerpt {
+        margin: 0;
+        @include pad(0 0 5px 0);
+        font-style: italic;
+      }
+    }
+    .site-content-inner {
+      .content-area {
+        @include media(min-width $small-potrait max-width $pc-standard) {
+          @include span-columns(12);
           @include pad();
+        }
+        @include media(min-width $pc-standard) {
+          @include span-columns(8 of 12);
+        }
+        .site-main {
+          @include pad(0);
+          border: 0;
           .post-thumbnail {
             background: none;
-            @include pad(0 0 default 0);
+            @include pad();
             img {
               margin: 0 auto;
             }
@@ -186,35 +174,30 @@
             margin: 0;
             @include pad();
           }
+          .comments-area {
+            border-radius: 2px;
+            @include fill-parent;
+            @include pad();
+            margin: 0;
+          }
         }
-        .comments-area {
-          background: white;
-          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+      .widget-area {
+        border: 0;
+        margin: 0;
+        @include media(max-width $pc-standard) {
+          display: none;
+        }
+        @include media(min-width $pc-standard) {
+          @include span-columns(4);
+        }
+        @include pad(0);
+        aside {
           border-radius: 2px;
           @include fill-parent;
-          @include pad();
           margin: 0;
+          @include pad(default);
         }
-      }
-    }
-    .widget-area {
-      border: 0;
-      margin: 0;
-      @include media(max-width $pc-standard) {
-        display: none;
-      }
-      @include media(min-width $pc-standard) {
-        @include span-columns(4);
-      }
-      @include pad(0);
-      .author-info,
-      aside {
-        background: white;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        border-radius: 2px;
-        @include fill-parent;
-        margin: 0;
-        @include pad(default);
       }
     }
   }

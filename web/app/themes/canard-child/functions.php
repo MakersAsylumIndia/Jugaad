@@ -254,3 +254,28 @@ function assets() {
   wp_enqueue_script('sage/js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', 'assets', 100);
+
+function allow_my_post_types($allowed_post_types) {
+    $allowed_post_types = array('jugaad_tutorials', 'jugaad_events');
+    return $allowed_post_types;
+}
+add_filter( 'rest_api_allowed_post_types', 'allow_my_post_types' );
+
+function jetpackme_remove_rp() {
+    if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+        $jprp = Jetpack_RelatedPosts::init();
+        $callback = array( $jprp, 'filter_add_target_to_dom' );
+        remove_filter( 'the_content', $callback, 40 );
+    }
+}
+add_filter( 'wp', 'jetpackme_remove_rp', 20 );
+
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+
+add_action( 'loop_start', 'jptweak_remove_share' );

@@ -1,0 +1,18 @@
+.widget_facebook_likebox {
+  h2 {
+    font-size: $base-font-size;
+    border-bottom: $base-border;
+    @include pad(12px 0);
+    a {
+      color: $dark-gray;
+    }
+  }
+}
+
+.widget_yikes_easy_mc_widget {
+  h2 {
+    font-size: $base-font-size;
+    border-bottom: $base-border;
+    @include pad(12px 0);
+  }
+}

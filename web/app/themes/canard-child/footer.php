@@ -10,9 +10,11 @@
 
 	</div><!-- #content -->
 
-	<?php get_sidebar( 'footer' ); ?>
+	<?php
+    get_sidebar( 'footer' );
 
-	<?php if ( has_nav_menu( 'footer' ) ) : ?>
+	  if ( has_nav_menu( 'footer' ) ) :
+  ?>
 		<nav class="footer-navigation" role="navigation">
 			<?php
 				wp_nav_menu( array(
@@ -21,9 +23,11 @@
 				) );
 			?>
 		</nav><!-- .footer-navigation -->
-	<?php endif; ?>
+	<?php
+    endif;
 
-	<?php if ( has_nav_menu( 'secondary' ) ) : ?>
+	  if ( has_nav_menu( 'secondary' ) ) :
+  ?>
 		<nav class="bottom-navigation" role="navigation">
 			<?php
 				wp_nav_menu( array(
@@ -32,9 +36,11 @@
 				) );
 			?>
 		</nav><!-- .bottom-navigation -->
-	<?php endif; ?>
+	<?php
+    endif;
 
-	<?php if ( has_nav_menu( 'social' ) ) : ?>
+	  if ( has_nav_menu( 'social' ) ) :
+  ?>
 		<nav class="social-navigation bottom-social" role="navigation">
 			<?php
 				wp_nav_menu( array(

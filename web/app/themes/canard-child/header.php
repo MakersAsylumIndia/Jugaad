@@ -35,8 +35,10 @@
 								) );
 							?>
 						</nav><!-- .secondary-navigation -->
-					<?php endif; ?>
-					<?php if ( has_nav_menu( 'social' ) ) : ?>
+					<?php
+            endif;
+					  if ( has_nav_menu( 'social' ) ) :
+          ?>
 						<nav class="social-navigation" role="navigation">
 							<?php
 								wp_nav_menu( array(

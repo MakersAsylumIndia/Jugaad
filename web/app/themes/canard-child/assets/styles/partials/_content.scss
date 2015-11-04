@@ -57,6 +57,9 @@
 .archive .content-area .format-standard.has-post-thumbnail .entry-header .entry-title {
   font-size: 1.2rem;
   height: 44px;
+  a {
+    color: $dark-gray;
+  }
 }
 
 .home .content-area .format-standard.has-post-thumbnail .entry-summary p,

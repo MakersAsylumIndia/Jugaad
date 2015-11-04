@@ -1,9 +1,3 @@
-<?php
-/**
- * @package Canard
- */
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -18,14 +12,19 @@
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail( 'canard-single-thumbnail' ); ?>
 			</div>
-		<?php endif; ?>
-		<?php the_content(); ?>
-    <?php foreach( get_cfc_meta( 'jugaad_tutorial' ) as $key => $value ){ ?>
+		<?php
+      endif;
+
+		  the_content();
+
+      foreach( get_cfc_meta( 'jugaad_tutorial' ) as $key => $value ){
+    ?>
       <h3>Step <?php echo $key+1; ?>: <?php the_cfc_field( 'jugaad_tutorial', 'step-title', false, $key ); ?></h3>
       <div><img src="<?php the_cfc_field( 'jugaad_tutorial', 'step-image', false, $key ); ?>"></img></div>
       <p><?php the_cfc_field( 'jugaad_tutorial', 'step-description', false, $key ); ?></p>
-    <?php }  ?>
-		<?php
+    <?php
+      }
+
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'canard' ) . '</span>',
 				'after'       => '</div>',
@@ -37,7 +36,28 @@
 		?>
 	</div><!-- .entry-content -->
 
+  <div>
+    <?php
+      if ( function_exists( 'sharing_display' ) ) {
+          sharing_display( '', true );
+      }
+
+      if ( class_exists( 'Jetpack_Likes' ) ) {
+          $custom_likes = new Jetpack_Likes;
+          echo $custom_likes->post_likes( '' );
+      }
+    ?>
+  </div>
+
 	<footer class="entry-footer">
 		<?php canard_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+  <div>
+    <?php
+      if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+          echo do_shortcode( '[jetpack-related-posts]' );
+      }
+    ?>
+  </div>
 </article><!-- #post-## -->

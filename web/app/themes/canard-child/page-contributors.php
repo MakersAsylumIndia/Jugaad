@@ -14,9 +14,8 @@ foreach ($roles as $role) :
   if ($results) $users = array_merge($users, $results);
 endforeach;
 
+get_header();
 ?>
-
-<?php get_header(); ?>
 
 <div class="site-content-inner">
 	<div class="content-area" role="main">
@@ -28,8 +27,8 @@ endforeach;
 				{
 					if(($user->display_name == "Team Jugaad") || (count_user_posts( $user->ID ) < 1)) {
 						continue;
-					}
-					?>
+				}
+			?>
 					<div class="author hentry">
 						<div class="authorAvatar">
 							<?php echo get_avatar( $user->user_email, '128' ); ?>
@@ -76,9 +75,9 @@ endforeach;
 							</p>
 						</div>
 					</div>
-					<?php
-				}
-			?>
+    			<?php
+    				}
+    			?>
 		</main>
 	</div>
 </div>

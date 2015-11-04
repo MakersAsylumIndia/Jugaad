@@ -9,10 +9,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <a class="post-thumbnail" href="<?php the_permalink(); ?>">
     <?php
-    // Output the featured image.
-    if (has_post_thumbnail()) {
-        the_post_thumbnail('canard-featured-content-thumbnail');
-    }
+      // Output the featured image.
+      if (has_post_thumbnail()) {
+          the_post_thumbnail('canard-featured-content-thumbnail');
+      }
     ?>
   </a>
 

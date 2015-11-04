@@ -15,18 +15,15 @@
   display: none;
 }
 .page-read .main-navigation .current_page_item > a,
-.page-read .main-navigation .current-menu-item > a,
-.page-read .main-navigation .current_page_ancestor > a {
+.page-read .main-navigation .current-menu-item > a {
   color: $read;
 }
-.post-type-archive-jugaad_tutorials .main-navigation .current_page_item > a,
-.post-type-archive-jugaad_tutorials .main-navigation .current-menu-item > a,
-.post-type-archive-jugaad_tutorials .main-navigation .current_page_ancestor > a {
+.single-jugaad_tutorials .main-navigation .current-menu-item > a,
+.post-type-archive-jugaad_tutorials .main-navigation .current-menu-item > a {
   color: $do;
 }
-.post-type-archive-jugaad_events .main-navigation .current_page_item > a,
-.post-type-archive-jugaad_events .main-navigation .current-menu-item > a,
-.post-type-archive-jugaad_events .main-navigation .current_page_ancestor > a {
+.single-jugaad_events .main-navigation .current-menu-item > a,
+.post-type-archive-jugaad_events .main-navigation .current-menu-item > a {
   color: $go;
 }
 .main-navigation a[href*="/read/"]:hover,
