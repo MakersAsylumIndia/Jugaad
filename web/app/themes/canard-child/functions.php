@@ -252,7 +252,7 @@ function asset_path($filename) {
   static $manifest;
 
   if (empty($manifest)) {
-    $manifest_path = get_stylesheet_directory_uri() . '/dist/' . 'assets.json';
+    $manifest_path = get_stylesheet_directory() . '/dist/' . 'assets.json';
     $manifest = new JsonManifest($manifest_path);
   }
 
