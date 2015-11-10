@@ -100,7 +100,7 @@ function create_post_type() {
       'description' => 'Holds all the Tutorials for the DO section',
       'public' => true,
       'menu_position' => 4,
-      'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'post-formats', 'comments', 'author'),
+      'supports' => array('title', 'editor', 'publicize', 'excerpt', 'thumbnail', 'post-formats', 'comments', 'author'),
       'taxonomies' => array('post_tag', 'category'),
       'has_archive' => true,
       'rewrite' => array('slug' => 'do')
@@ -126,7 +126,7 @@ function create_post_type() {
       'description' => 'Holds all the Events for the GO section',
       'public' => true,
       'menu_position' => 5,
-      'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'post-formats', 'comments'),
+      'supports' => array('title', 'editor', 'publicize', 'excerpt', 'thumbnail', 'post-formats', 'comments'),
       'taxonomies' => array('post_tag', 'category'),
       'has_archive' => true,
       'rewrite' => array('slug' => 'go')
