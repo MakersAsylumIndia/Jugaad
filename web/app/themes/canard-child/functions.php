@@ -268,7 +268,7 @@ function asset_path($filename) {
  */
 function assets() {
   $parent_style = 'parent-style';
-  wp_enqueue_style($parent_style, get_stylesheet_directory_uri() . '/style.css');
+  wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
   wp_enqueue_style('canard-child/css', asset_path('styles/main.css'), array($parent_style), null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
