@@ -22,28 +22,32 @@ add_action('wp_enqueue_scripts', 'load_fonts');
 /**
 * Child Theme Setup
 **/
+function canard_child_excerpt_more()
+{
+  return __('&hellip', 'canard-child');
+}
+function canard_child_continue_reading($the_excerpt)
+{
+  return $the_excerpt . ' <a href="'. get_permalink() . '">' . __( 'Continue Reading <span>&rarr;</span>', 'canard-child' ) . '</a>';
+}
 function child_theme_setup()
 {
   remove_filter('canard_get_featured_posts', 'canard_get_featured_posts');
-  add_filter( 'canard_get_featured_posts', function( $posts ){
+  add_filter('canard_get_featured_posts', function($posts){
     // Modify this to your needs:
-    $posts = get_posts( array(
-      'post_type'       => array( 'post', 'jugaad_tutorials' ),
+    $posts = get_posts(array(
+      'post_type'       => array('post', 'jugaad_tutorials'),
       'posts_per_page'  => 5,
       'tag' => 'featured'
     ) );
     return $posts;
-  }, PHP_INT_MAX );
+  }, PHP_INT_MAX);
+  remove_filter( 'excerpt_more', 'canard_excerpt_more');
+  add_filter( 'excerpt_more', 'canard_child_excerpt_more', 11);
+  remove_filter( 'the_excerpt', 'canard_continue_reading', 9);
+  add_filter( 'the_excerpt', 'canard_child_continue_reading');
 }
 add_action('after_setup_theme', 'child_theme_setup');
-
-/**
-* Custom lenght of the excerpt.
-**/
-function canard_child_excerpt_length( $length ) {
-	return 20;
-}
-add_filter( 'excerpt_length', 'canard_child_excerpt_length', 1000 );
 
 /**
 * Page Slug Body Class
@@ -185,6 +189,35 @@ function canard_entry_categories() {
 		}
 	}
 }
+
+function setup() {
+  // Enable features from Soil when plugin is activated
+  // https://roots.io/plugins/soil/
+  add_theme_support('soil-clean-up');
+  add_theme_support('soil-nav-walker');
+  add_theme_support('soil-nice-search');
+  add_theme_support('soil-jquery-cdn');
+  add_theme_support('soil-relative-urls');
+
+  // Enable plugins to manage the document title
+  // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+  add_theme_support('title-tag');
+  // Enable post thumbnails
+  // http://codex.wordpress.org/Post_Thumbnails
+  // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
+  // http://codex.wordpress.org/Function_Reference/add_image_size
+  add_theme_support('post-thumbnails');
+  // Enable post formats
+  // http://codex.wordpress.org/Post_Formats
+  add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
+  // Enable HTML5 markup support
+  // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+  add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
+  // Use main stylesheet for visual editor
+  // To add custom styles edit /assets/styles/layouts/_tinymce.scss
+  add_editor_style('styles/main.css');
+}
+add_action('after_setup_theme', 'setup');
 
 /**
  * Get paths for assets

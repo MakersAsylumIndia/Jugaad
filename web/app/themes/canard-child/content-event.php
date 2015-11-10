@@ -2,7 +2,7 @@
 	<header class="entry-header">
 		<?php
 			canard_entry_categories();
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		?>
 	</header><!-- .entry-header -->
 

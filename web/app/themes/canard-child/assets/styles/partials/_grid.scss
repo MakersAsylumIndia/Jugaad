@@ -23,6 +23,10 @@
 
 /*Home*/
 .home .site-content-inner {
+  @include pad(default 0);
+  @include media(max-width $ipad) {
+    @include pad(default);
+  }
   .content-area {
     @include media(min-width $pc-standard) {
       @include span-columns(8 of 12);
@@ -30,15 +34,9 @@
     }
     .site-main {
       border: 0;
+      @include pad(0);
       @include span-columns(8 of 8);
-      @include media(max-width $small-landspace) {
-        @include pad(0);
-      }
-      @include media(min-width $tablet) {
-        @include pad(0);
-      }
       @include media(min-width $pc-standard) {
-        @include pad(0);
         @include fill-parent;
       }
       .hentry {
@@ -47,26 +45,28 @@
           @include omega(2n);
           margin-top: 0;
           margin-bottom: 2.35765%;
-          height: 420px;
         }
         padding: 0;
-        border-radius: 2px;
+        border: 1px solid $dark-gray;
+        .entry-title {
+          font-size: rem(22);
+        }
       }
     }
   }
   .widget-area {
+    @include pad(0);
     @include media(min-width $pc-standard) {
       @include span-columns(4 of 12);
       @include omega();
-      @include pad(0 0 0 default);
       margin: 0;
       border: 0;
     }
     aside {
       @include fill-parent;
-      border-radius: 2px;
+      @include pad(1rem);
+      border: 1px solid $dark-gray;
       margin-bottom: 40px;
-      @include pad(20px);
     }
   }
 }
@@ -74,6 +74,10 @@
 /* Page and Archive */
 .page-read .site-content-inner,
 .archive .site-content-inner {
+  @include pad(default 0);
+  @include media(max-width $ipad) {
+    @include pad(default);
+  }
   .content-area {
     @include media(min-width $pc-standard) {
       @include span-columns(12);
@@ -85,22 +89,29 @@
       border: 0;
       .hentry {
         background: white;
+        border: 1px solid $dark-gray;
         @include media(min-width $tablet max-width $pc-standard) {
           @include span-columns(6);
           @include omega(2n);
           margin-top: 0;
           margin-bottom: 2.35765%;
-          height: 420px;
         }
         @include media(min-width $pc-standard) {
           @include span-columns(4);
           @include omega(3n);
           margin-top: 0;
           margin-bottom: 2.35765%;
-          height: 420px;
         }
         padding: 0;
-        border-radius: 2px;
+        .entry-title {
+          font-size: rem(22);
+        }
+        .entry-summary {
+          h3 {
+            font-size: rem(20);
+            margin: 0;
+          }
+        }
       }
     }
   }
@@ -129,7 +140,7 @@
         @include pad(0 0 5px 0);
         .entry-header-inner {
           @include fill-parent;
-          h1 {
+          h2 {
             @include media(min-width $small-potrait max-width $ipad) {
               font-size: 1.5rem;
             }
@@ -166,7 +177,7 @@
           img {
             @include media(min-width $small-potrait max-width $ipad) {
               @include fill-parent;
-              margin: 5px 0;
+              margin: 5px auto;
             }
           }
           img.alignright,

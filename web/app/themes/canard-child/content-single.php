@@ -10,9 +10,9 @@
     <header class="entry-header">
       <?php
         canard_entry_categories();
-        the_title( '<h1 class="entry-title">', '</h1>' );
+        the_title( '<h2 class="entry-title">', '</h2>' );
       ?>
-      <h2 class="single-excerpt"><?php echo(get_the_excerpt()); ?></h2>
+      <p class="single-excerpt"><?php echo(get_the_excerpt()); ?></p>
       <span>By</span> <?php the_author(); ?>
     </header><!-- .entry-header -->
 

@@ -49,23 +49,32 @@
 .archive .content-area .format-standard.has-post-thumbnail .entry-header {
   display: block;
   @include fill-parent;
-  @include pad();
+  height: 0;
+  @include pad(default default 15% default);
 }
 
 .home .content-area .format-standard.has-post-thumbnail .entry-header .entry-title,
 .page-read .content-area .format-standard.has-post-thumbnail .entry-header .entry-title,
 .archive .content-area .format-standard.has-post-thumbnail .entry-header .entry-title {
-  font-size: 1.2rem;
-  height: 44px;
   a {
     color: $dark-gray;
   }
 }
 
+.home .content-area .format-standard.has-post-thumbnail .entry-summary,
+.page-read .content-area .format-standard.has-post-thumbnail .entry-summary,
+.post-type-archive-jugaad_tutorials .content-area .format-standard.has-post-thumbnail .entry-summary {
+}
+
+.home .content-area .format-standard.has-post-thumbnail .entry-summary a,
+.page-read .content-area .format-standard.has-post-thumbnail .entry-summary a,
+.post-type-archive-jugaad_tutorials .content-area .format-standard.has-post-thumbnail .entry-summary a {
+  font-size: 0.8rem;
+}
+
 .home .content-area .format-standard.has-post-thumbnail .entry-summary p,
 .page-read .content-area .format-standard.has-post-thumbnail .entry-summary p,
 .post-type-archive-jugaad_tutorials .content-area .format-standard.has-post-thumbnail .entry-summary p {
-  height: 96px;
   overflow: hidden;
 }
 
@@ -77,9 +86,10 @@
   margin-bottom: 5px;
 }
 
-.home .site-content-inner .hentry .entry-meta,
-.page-read .site-content-inner .hentry .entry-meta,
-.archive .site-content-inner .hentry .entry-meta {
+.home .site-content-inner .hentry .entry-meta:last-child,
+.page-read .site-content-inner .hentry .entry-meta:last-child,
+.archive .site-content-inner .hentry .entry-meta:last-child {
+
   line-height: 1.5;
 }
 
@@ -99,6 +109,15 @@
   display: none;
 }
 
+.single-jugaad_tutorials {
+  .entry-content {
+    h1, h2, h3 {
+      font-size: rem(22);
+      margin: 0;
+    }
+  }
+}
+
 .jp-relatedposts {
   @include fill-parent();
   @include pad(default 0);
@@ -111,4 +130,8 @@
 .jp-relatedposts h3,
 .jp-relatedposts h4 {
   font-family: $heading-font-family;
+}
+
+.sharedaddy.sd-sharing-enabled {
+  border-bottom: 0px !important;
 }

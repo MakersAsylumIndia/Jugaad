@@ -31,14 +31,14 @@
 
   <header class="entry-header">
     <?php
-      the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
+      the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
     ?>
   </header><!-- .entry-header -->
 
   <?php if ( 'jugaad_events' == get_post_type() ) : ?>
     <div class="entry-summary">
       <?php foreach( get_cfc_meta( 'jugaad_event' ) as $key => $value ){ ?>
-        <span><h4>Where:</h4> <p><?php the_cfc_field( 'jugaad_event', 'event-venue', false, $key ); ?></p></span>
+        <span><h3>Where:</h3> <p><?php the_cfc_field( 'jugaad_event', 'event-venue', false, $key ); ?></p></span>
         <?php
           $event_date_tmp = get_cfc_field( 'jugaad_event', 'event-start-date', false, $key);
           $event_start_date = date_parse_from_format('d-m-Y', (string)$event_date_tmp);
@@ -48,7 +48,7 @@
             $event_end_date = date_parse_from_format('d-m-Y', (string)$event_date_tmp);
           endif;
         ?>
-        <span><h4>When:</h4> <p><?php echo $event_start_date["day"] . "/" . $event_start_date["month"] . "/" . $event_start_date["year"]; ?> <?php if(!($event_end_date=='')): ?> to <?php echo $event_end_date["day"] . "/" . $event_end_date["month"] . "/" . $event_end_date["year"]; ?><?php endif; ?></p></span>
+        <span><h3>When:</h3> <p><?php echo $event_start_date["day"] . "/" . $event_start_date["month"] . "/" . $event_start_date["year"]; ?> <?php if(!($event_end_date=='')): ?> to <?php echo $event_end_date["day"] . "/" . $event_end_date["month"] . "/" . $event_end_date["year"]; ?><?php endif; ?></p></span>
       <?php }  ?>
     </div>
   <?php else: ?>

@@ -19,7 +19,7 @@
   <header class="entry-header">
     <?php
       canard_entry_categories();
-      the_title('<h1 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h1>');
+      the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
     ?>
     <div class="entry-excerpt">
       <?php the_excerpt(); ?>

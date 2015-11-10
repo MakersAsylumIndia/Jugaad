@@ -2,9 +2,17 @@
   h2 {
     font-size: $base-font-size;
     border-bottom: $base-border;
+    margin-bottom: 0;
     @include pad(12px 0);
     a {
       color: $dark-gray;
+    }
+  }
+  .fb-page.fb_iframe_widget {
+    margin-bottom: 0;
+    @include pad(1rem 0);
+    iframe {
+      margin: 0;
     }
   }
 }
@@ -13,6 +21,10 @@
   h2 {
     font-size: $base-font-size;
     border-bottom: $base-border;
+    margin-bottom: 0;
     @include pad(12px 0);
+  }
+  section {
+    @include pad(1rem 0);
   }
 }
