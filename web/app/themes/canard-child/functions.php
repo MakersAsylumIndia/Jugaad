@@ -1,16 +1,5 @@
 <?php
 /**
-* Enqueuing Stylesheets
-**/
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
-function theme_enqueue_styles()
-{
-  $parent_style = 'parent-style';
-  wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
-}
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
-
-/**
 * Loading Google Fonts
 **/
 function load_fonts() {
@@ -263,7 +252,7 @@ function asset_path($filename) {
   static $manifest;
 
   if (empty($manifest)) {
-    $manifest_path = get_template_directory() . '/dist/' . 'assets.json';
+    $manifest_path = get_stylesheet_directory_uri() . '/dist/' . 'assets.json';
     $manifest = new JsonManifest($manifest_path);
   }
 
@@ -278,7 +267,9 @@ function asset_path($filename) {
  * Theme assets
  */
 function assets() {
-  wp_enqueue_style('canard-child/css', asset_path('styles/main.css'), false, null);
+  $parent_style = 'parent-style';
+  wp_enqueue_style($parent_style, get_stylesheet_directory_uri() . '/style.css');
+  wp_enqueue_style('canard-child/css', asset_path('styles/main.css'), array($parent_style), null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
@@ -310,5 +301,4 @@ function jptweak_remove_share() {
         remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
     }
 }
-
 add_action( 'loop_start', 'jptweak_remove_share' );
