@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ea782d791bcd83ea3048de7e9a430b8b",
-    "content-hash": "c23b9245ff8242458cce62344ae139ee",
+    "hash": "0666be923a986eab70642b4fe6506b67",
+    "content-hash": "d84a966900fda0342b0b697529a146b0",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -388,6 +388,26 @@
             "time": "2015-01-17 02:23:40"
         },
         {
+            "name": "wpackagist-plugin/add-to-any",
+            "version": "1.6.7",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/add-to-any/",
+                "reference": "tags/1.6.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/add-to-any.1.6.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/add-to-any/"
+        },
+        {
             "name": "wpackagist-plugin/akismet",
             "version": "3.1.5",
             "source": {
@@ -468,6 +488,26 @@
             "homepage": "https://wordpress.org/plugins/members/"
         },
         {
+            "name": "wpackagist-plugin/recent-posts-widget-extended",
+            "version": "0.9.9.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/recent-posts-widget-extended/",
+                "reference": "tags/0.9.9.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/recent-posts-widget-extended.0.9.9.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/recent-posts-widget-extended/"
+        },
+        {
             "name": "wpackagist-plugin/wck-custom-fields-and-custom-post-types-creator",
             "version": "1.1.6",
             "source": {
@@ -509,15 +549,15 @@
         },
         {
             "name": "wpackagist-plugin/yikes-inc-easy-mailchimp-extender",
-            "version": "6.0.3.1",
+            "version": "6.0.3.3",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/yikes-inc-easy-mailchimp-extender/",
-                "reference": "tags/6.0.3.1"
+                "reference": "tags/6.0.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yikes-inc-easy-mailchimp-extender.6.0.3.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/yikes-inc-easy-mailchimp-extender.6.0.3.3.zip",
                 "reference": null,
                 "shasum": null
             },

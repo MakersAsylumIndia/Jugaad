@@ -38,10 +38,17 @@
 .page-read .content-area .format-standard a.post-thumbnail,
 .archive .content-area .format-standard a.post-thumbnail {
   @include fill-parent;
+  text-align: center;
   margin: 0;
   height: 175px;
   overflow: hidden;
-  background-size: cover;
+}
+
+.home .content-area .format-standard a.post-thumbnail img,
+.page-read .content-area .format-standard a.post-thumbnail img,
+.archive .content-area .format-standard a.post-thumbnail img {
+  max-width: 100%;
+  height: auto;
 }
 
 .home .content-area .format-standard.has-post-thumbnail .entry-header,

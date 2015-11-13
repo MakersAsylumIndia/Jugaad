@@ -28,3 +28,28 @@
     @include pad(1rem 0);
   }
 }
+
+.widget.rpwe_widget.recent-posts-extended {
+  border: 1px solid $medium-gray;
+  .widget-title {
+    font-size: 1.2rem;
+    margin-bottom: inherit;
+    @include pad(0 0 default 0);
+    border-bottom: 1px solid $light-gray;
+  }
+  .rpwe-block {
+    .rpwe-li {
+      padding-top: 10px;
+      margin-bottom: 0;
+      .rpwe-title {
+        font-size: 1rem;
+        a {
+          color: $dark-gray;
+        }
+        a:hover {
+          color: $read;
+        }
+      }
+    }
+  }
+}

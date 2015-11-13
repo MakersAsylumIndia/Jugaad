@@ -29,3 +29,9 @@ body {
   display: table;
   clear: both;
 }
+
+body.home .a2a_floating_style,
+body.page .a2a_floating_style,
+body.archive .a2a_floating_style {
+  display: none;
+}
