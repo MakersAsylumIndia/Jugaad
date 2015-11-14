@@ -126,7 +126,7 @@ function create_post_type() {
       'description' => 'Holds all the Events for the GO section',
       'public' => true,
       'menu_position' => 5,
-      'supports' => array('title', 'editor', 'publicize', 'excerpt', 'thumbnail', 'post-formats', 'comments'),
+      'supports' => array('title', 'editor', 'publicize', 'excerpt', 'thumbnail', 'post-formats'),
       'taxonomies' => array('post_tag', 'category'),
       'has_archive' => true,
       'rewrite' => array('slug' => 'go')
@@ -302,3 +302,55 @@ function jptweak_remove_share() {
     }
 }
 add_action( 'loop_start', 'jptweak_remove_share' );
+
+function remove_parent_image_sizes( $sizes ) {
+    unset( $sizes['canard-post-thumbnail'] );
+    unset( $sizes['canard-featured-content-thumbnail'] );
+    unset( $sizes['canard-single-thumbnail'] );
+    return $sizes;
+}
+add_filter( 'intermediate_image_sizes_advanced', 'remove_parent_image_sizes' );
+
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'canard-child-post-thumbnail', 400, 225, true );
+    add_image_size( 'canard-child-featured-content-thumbnail', 915, 515, true );
+}
+
+function default_comments_off( $data ) {
+    if( $data['post_type'] == 'jugaad_event' ) {
+        $data['comment_status'] = 0;
+    }
+
+    return $data;
+}
+add_filter( 'wp_insert_post_data', 'default_comments_off' );
+
+// if (class_exists('MultiPostThumbnails')) {
+//   new MultiPostThumbnails(
+//     array(
+//       'label' => 'Thumbnail Image',
+//       'id' => 'thumbnail-image',
+//       'post_type' => 'post'
+//     )
+//   );
+// }
+//
+// if (class_exists('MultiPostThumbnails')) {
+//   new MultiPostThumbnails(
+//     array(
+//       'label' => 'Thumbnail Image',
+//       'id' => 'thumbnail-image',
+//       'post_type' => 'jugaad_events'
+//     )
+//   );
+// }
+//
+// if (class_exists('MultiPostThumbnails')) {
+//   new MultiPostThumbnails(
+//     array(
+//       'label' => 'Thumbnail Image',
+//       'id' => 'thumbnail-image',
+//       'post_type' => 'jugaad_tutorials'
+//     )
+//   );
+// }

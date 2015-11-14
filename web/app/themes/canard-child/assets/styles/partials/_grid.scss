@@ -44,7 +44,7 @@
           @include span-columns(4 of 8);
           @include omega(2n);
           margin-top: 0;
-          margin-bottom: 2.35765%;
+          margin-bottom: 20px;
         }
         padding: 0;
         border: 1px solid $dark-gray;
@@ -66,7 +66,7 @@
       @include fill-parent;
       @include pad(1rem);
       border: 1px solid $dark-gray;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -94,13 +94,13 @@
           @include span-columns(6);
           @include omega(2n);
           margin-top: 0;
-          margin-bottom: 2.35765%;
+          margin-bottom: 30px;
         }
         @include media(min-width $pc-standard) {
           @include span-columns(4);
           @include omega(3n);
           margin-top: 0;
-          margin-bottom: 2.35765%;
+          margin-bottom: 30px;
         }
         padding: 0;
         .entry-title {
@@ -167,29 +167,42 @@
         .site-main {
           @include pad(0);
           border: 0;
-          .post-thumbnail {
-            background: none;
-            @include pad();
-            img {
-              margin: 0 auto;
+          .hentry {
+            margin-bottom: 0;
+            .entry-content {
+              @include pad(default 0);
+              .post-thumbnail {
+                background: none;
+                @include pad();
+                img {
+                  margin: 0 auto;
+                }
+              }
+              img {
+                @include media(min-width $small-potrait max-width $ipad) {
+                  @include fill-parent;
+                  margin: 5px auto;
+                }
+              }
+              img.alignright,
+              img.alignleft {
+                margin: 0;
+                @include pad();
+              }
+              div {
+                margin-bottom: 20px;
+                h3 {
+                  font-size: 1.2rem;
+                  margin-bottom: 0;
+                }
+              }
+              .comments-area {
+                border-radius: 2px;
+                @include fill-parent;
+                @include pad();
+                margin: 0;
+              }
             }
-          }
-          img {
-            @include media(min-width $small-potrait max-width $ipad) {
-              @include fill-parent;
-              margin: 5px auto;
-            }
-          }
-          img.alignright,
-          img.alignleft {
-            margin: 0;
-            @include pad();
-          }
-          .comments-area {
-            border-radius: 2px;
-            @include fill-parent;
-            @include pad();
-            margin: 0;
           }
         }
       }
@@ -204,10 +217,11 @@
         }
         @include pad(0);
         aside {
-          border-radius: 2px;
+          border: 1px solid $medium-gray;
           @include fill-parent;
           margin: 0;
           @include pad(default);
+          margin-bottom: 30px;
         }
       }
     }

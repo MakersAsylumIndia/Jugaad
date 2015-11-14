@@ -33,7 +33,7 @@
   border: 1px solid $medium-gray;
   .widget-title {
     font-size: 1.2rem;
-    margin-bottom: inherit;
+    margin-bottom: 0;
     @include pad(0 0 default 0);
     border-bottom: 1px solid $light-gray;
   }

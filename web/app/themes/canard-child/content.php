@@ -14,7 +14,17 @@
       } elseif ( has_post_format( 'image' ) || has_post_format( 'gallery' ) ) {
         echo '<div class="post-thumbnail">';
       }
-      the_post_thumbnail( 'canard-post-thumbnail' );
+
+      the_post_thumbnail( 'canard-child-post-thumbnail' );
+
+      // if (class_exists('MultiPostThumbnails')) :
+      //   MultiPostThumbnails::the_post_thumbnail(
+      //     get_post_type(),
+      //     'thumbnail-image',
+      //     NULL,
+      //     'canard-child-post-thumbnail'
+      //   );
+      // endif;
 
       if ( is_sticky() ) :
   ?>

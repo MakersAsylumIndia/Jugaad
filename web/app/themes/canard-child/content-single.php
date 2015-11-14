@@ -18,7 +18,7 @@
 
 		<?php if ( has_post_thumbnail() && ( ! has_post_format() || has_post_format( 'image' ) || has_post_format( 'gallery' ) ) ) : ?>
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail( 'canard-single-thumbnail' ); ?>
+				<?php the_post_thumbnail( 'canard-featured-content-thumbnail' ); ?>
 			</div>
 		<?php
       endif;
@@ -35,20 +35,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-  <div>
-    <?php
-      if ( function_exists( 'sharing_display' ) ) {
-          sharing_display( '', true );
-      }
-
-      if ( class_exists( 'Jetpack_Likes' ) ) {
-          $custom_likes = new Jetpack_Likes;
-          echo $custom_likes->post_likes( '' );
-      }
-    ?>
-  </div>
-
+	
   <div>
     <?php
       if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
