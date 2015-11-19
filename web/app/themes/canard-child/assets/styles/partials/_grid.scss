@@ -167,15 +167,26 @@
         .site-main {
           @include pad(0);
           border: 0;
+          @include media(min-width 1380px) {
+            @include fill-parent;
+          }
+          .comments-area {
+            border-radius: 2px;
+            @include fill-parent;
+            @include pad();
+            margin: 0;
+          }
           .hentry {
             margin-bottom: 0;
             .entry-content {
               @include pad(default 0);
+              @include fill-parent;
               .post-thumbnail {
                 background: none;
-                @include pad();
+                margin-bottom: 0.75em;
                 img {
-                  margin: 0 auto;
+                  max-width: 100%;
+                  height: auto;
                 }
               }
               img {
@@ -190,17 +201,10 @@
                 @include pad();
               }
               div {
-                margin-bottom: 20px;
                 h3 {
                   font-size: 1.2rem;
                   margin-bottom: 0;
                 }
-              }
-              .comments-area {
-                border-radius: 2px;
-                @include fill-parent;
-                @include pad();
-                margin: 0;
               }
             }
           }

@@ -1,3 +1,7 @@
+.footer-widget {
+  @include pad(default);
+}
+
 .footer-widget,
 .footer-widget a {
   background-color: #1B1B1B;
