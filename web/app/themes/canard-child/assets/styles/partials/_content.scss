@@ -169,11 +169,6 @@ a.post-thumbnail:hover img {
 	transform: translateY(-50%);
 }
 
-.jp-relatedposts {
-  @include fill-parent();
-  @include pad(default 0);
-}
-
 .jp-relatedposts * {
   font-family: $base-font-family;
 }

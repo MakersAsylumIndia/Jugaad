@@ -176,6 +176,11 @@
             @include pad();
             margin: 0;
           }
+          .jp-relatedposts {
+            @include fill-parent;
+            @include pad();
+            margin: 0;
+          }
           .hentry {
             margin-bottom: 0;
             .entry-content {
