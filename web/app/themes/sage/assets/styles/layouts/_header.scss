@@ -1,0 +1,64 @@
+.jugaad-brand {
+  background: url("../images/logo.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+  height: 95px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: cover;
+  margin: 20px auto;
+  max-width: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar.navbar-default {
+  background-color: white;
+  border: none;
+  margin-bottom: 0;
+  li a {
+    font-size: 2.4rem;
+  }
+}
+
+.navbar-brand.hidden-md.hidden-lg {
+  background: url("../images/logo.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+  width: 190px;
+  height: 85px;
+}
+
+.collapse.navbar-collapse {
+  text-align: center;
+}
+
+.nav.navbar-nav {
+  display: inline-block;
+  float: none;
+  .active.menu-read a {
+    color: #fff;
+    background: $read;
+  }
+  .active.menu-do a {
+    color: #fff;
+    background: $do;
+  }
+  .active.menu-go a {
+    color: #fff;
+    background: $go;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+  .collapse.navbar-collapse {
+    text-align: center;
+  }
+  .nav.navbar-nav {
+    display: inline-block;
+    float: right;
+  }
+}

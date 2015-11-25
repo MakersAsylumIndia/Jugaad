@@ -1,0 +1,40 @@
+.page-sidebar {
+  .widget_facebook_likebox {
+    > h3 {
+      margin-top: 0;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #e8e8e8;
+      a {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #000;
+      }
+    }
+  }
+  .widget_yikes_easy_mc_widget {
+    > h3 {
+      color: #000;
+      margin-top: 0;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.sidebar {
+  .recent-posts-extended {
+    padding: 15px;
+    border: 1px solid #000;
+    > h3 {
+      margin-top: 0;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,354 @@
+/*--------------------------------------------------------------
+## Featured Content
+--------------------------------------------------------------*/
+.featured-content-inner:before,
+.featured-content-inner:after {
+  content: "";
+	display: table;
+}
+.featured-content-inner:after {
+  clear: both;
+}
+.featured-content-inner {
+  margin: 0 auto;
+}
+.featured-content {
+	padding: 0;
+}
+.featured-content .hentry {
+	background-color: #1f1f1f;
+	background-position: 50% 50%;
+	background-size: cover;
+	color: #fff;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.home .featured-content .hentry {
+	border-bottom: 0;
+	border-top: 0;
+	margin: 0 0 15px;
+	height: 300px;
+	width: 100%;
+}
+.home .featured-content .hentry:first-child {
+	margin-top: 0;
+}
+.featured-content .has-post-thumbnail {
+	text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.7);
+}
+.featured-content a {
+	color: #fff;
+}
+.featured-content a:focus {
+	outline-color: rgba(255, 255, 255, 0.7);
+}
+.featured-content .post-thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+	margin: 0;
+	opacity: 0.7;
+	position: absolute;
+	top: 0;
+  transition: all 350ms ease-in-out;
+}
+.featured-content .hentry:not(.has-post-thumbnail) .post-thumbnail {
+	opacity: 0;
+}
+.featured-content .post-thumbnail img {
+	opacity: 0;
+	visibility: hidden;
+}
+.featured-content .hentry:hover .post-thumbnail,
+.featured-content .hentry .post-thumbnail:focus {
+	background-color: #000;
+	opacity: 0.3;
+}
+.featured-content .hentry:not(.has-post-thumbnail):hover .post-thumbnail,
+.featured-content .hentry:not(.has-post-thumbnail) .post-thumbnail:focus {
+	background: #d11415;
+	opacity: 1;
+}
+.featured-content .entry-header {
+	bottom: 0;
+	position: absolute;
+}
+.featured-content .entry-title {
+	font-size: 25px;
+	line-height: 1.2;
+	padding: 0 30px 30px;
+}
+.featured-content .entry-summary {
+  padding: 0 30px 30px;
+}
+.featured-content .vcard {
+  padding-left: 30px;
+}
+.featured-content .entry-meta {
+	padding-left: 30px;
+	padding-right: 30px;
+	width: 100%;
+}
+.featured-content .entry-header .cat-links {
+  padding: 4px 6px;
+}
+.featured-content .type-post .entry-header .cat-links {
+  background-color: $read;
+}
+.featured-content .type-jugaad_tutorials .entry-header .cat-links {
+  background-color: $do;
+}
+
+
+@media screen and (min-width: 768px) {
+  .featured-content-inner {
+    width: 720px;
+  }
+  .home .featured-content .hentry {
+		height: 350px;
+		width: 352.5px;
+	}
+	.home .featured-content .hentry:first-of-type {
+		height: 300px;
+		width: 100%;
+	}
+	.home .featured-content .hentry:nth-of-type(2),
+	.home .featured-content .hentry:nth-of-type(4) {
+		margin-right: 15px;
+	}
+}
+
+// @media screen and (min-width: 960px) {
+//   .featured-content-inner {
+//     width: 940px;
+//   }
+//   .home .featured-content .hentry {
+// 		height: 350px;
+// 		width: 345px;
+// 	}
+// 	.home .featured-content .hentry:first-of-type {
+// 		margin-right: 15px;
+// 		height: 350px;
+// 		width: 611px;
+// 	}
+// 	.home .featured-content .hentry:nth-of-type(2) {
+// 		margin-right: 0;
+// 		width: 313.99999999954px;
+// 	}
+// 	.home .featured-content .hentry:nth-of-type(3),
+// 	.home .featured-content .hentry:nth-of-type(4),
+// 	.home .featured-content .hentry:nth-of-type(5) {
+// 		width: 303.333333333px;
+// 	}
+// 	.home .featured-content .hentry:nth-of-type(3),
+//   .home .featured-content .hentry:nth-of-type(4) {
+// 		margin-right: 15px;
+// 	}
+// }
+
+@media screen and (min-width: 1080px) {
+  .featured-content-inner {
+    width: 1080px;
+  }
+  .home .featured-content .hentry:first-of-type {
+    height: 430px;
+    margin-right: 0;
+    width: 702px;
+  }
+  .home .featured-content .hentry:nth-of-type(2),
+  .home .featured-content .hentry:nth-of-type(3) {
+    height: 370px;
+    margin-left: 15px;
+    margin-right: 0;
+    width: 362.99999999988px;
+  }
+  .home .featured-content .hentry:nth-of-type(4),
+  .home .featured-content .hentry:nth-of-type(5) {
+    height: 310px;
+    margin-right: 0;
+    margin-top: -325px;
+    width: 343.5px;
+  }
+  .home .featured-content .hentry:nth-of-type(5) {
+    margin-left: 358.5px;
+  }
+}
+
+// @media screen and (min-width: 1380px) {
+//   .featured-content-inner {
+//     width: 1080px;
+//   }
+//   .home .featured-content .hentry:first-of-type {
+// 		height: 500px;
+// 		width: 897px;
+// 	}
+// 	.home .featured-content .hentry:nth-of-type(2),
+// 	.home .featured-content .hentry:nth-of-type(3) {
+// 		height: 375px;
+// 		margin-left: 15px;
+// 		width: 468.00000000053996px;
+// 	}
+// 	.home .featured-content .hentry:nth-of-type(4),
+// 	.home .featured-content .hentry:nth-of-type(5) {
+// 		height: 250px;
+// 		margin-top: -265px;
+// 		width: 441px;
+// 	}
+// 	.home .featured-content .hentry:nth-of-type(5) {
+// 		margin-left: 456px;
+// 	}
+// }
+
+/*--------------------------------------------------------------
+## Regular Listing
+--------------------------------------------------------------*/
+.home {
+  .page-content {
+    padding: 0;
+    div.col-sm-6 {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      &:nth-of-type(2n+1) {
+        clear: left;
+      }
+      article.hentry {
+        border: 1px solid black;
+        header {
+          .entry-meta {
+            padding: 10px;
+          }
+          .post-thumbnail {
+            overflow: hidden;
+          }
+          .entry-title {
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+        }
+        .entry-summary {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+        .byline.author.vcard {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.archive,
+.blog {
+  .page-content {
+    padding: 0;
+    div.col-sm-4 {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      &:nth-of-type(3n+4) {
+        clear: left;
+      }
+      article.hentry {
+        border: 1px solid black;
+        header {
+          .entry-meta {
+            padding: 10px;
+          }
+          .post-thumbnail {
+            overflow: hidden;
+          }
+          .entry-title {
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+        }
+        .entry-summary {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+        .byline.author.vcard {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.home,
+.archive {
+  .page-content{
+    .type-post {
+      .entry-meta a {
+        color: $read;
+      }
+    }
+    .type-jugaad_tutorials {
+      .entry-meta a {
+        color: $do;
+      }
+    }
+    .type-jugaad_events {
+      .entry-meta a {
+        color: $go;
+      }
+    }
+    .entry-title a,
+    .vcard a {
+      color: #000;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+## Sidebar Listing
+--------------------------------------------------------------*/
+.page-sidebar {
+  > section {
+    border: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+## READ
+--------------------------------------------------------------*/
+.single {
+  header {
+    margin-bottom: 2.4rem;
+  }
+  .entry-content {
+    > div {
+      display: block;
+      margin-bottom: 2.4rem;
+      padding: 0;
+    }
+    > p {
+      margin-bottom: 1.8rem;
+      > img {
+        margin-bottom: 2.4rem;
+      }
+    }
+    p {
+      font-size: 1.8rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .jugaad_events {
+    a {
+      font-size: 1.8rem;
+    }
+  }
+  #comments {
+    clear: left;
+  }
+}

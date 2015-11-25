@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "592a6bd47556a6b54f6f2c0f624b94e6",
-    "content-hash": "88583e47488dc2af242705826b226eb5",
+    "hash": "5345b4793f722027007f2a05913d30b3",
+    "content-hash": "9ac472f3ad1b1b89e36cce5604714e5e",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -232,16 +232,16 @@
         },
         {
             "name": "roots/soil",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/soil.git",
-                "reference": "4e9ad4562e1592c49f1f3a26c4dad1e00500c0c0"
+                "reference": "c9e224facb851011284c3ea925980d988473fb3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/soil/zipball/4e9ad4562e1592c49f1f3a26c4dad1e00500c0c0",
-                "reference": "4e9ad4562e1592c49f1f3a26c4dad1e00500c0c0",
+                "url": "https://api.github.com/repos/roots/soil/zipball/c9e224facb851011284c3ea925980d988473fb3f",
+                "reference": "c9e224facb851011284c3ea925980d988473fb3f",
                 "shasum": ""
             },
             "require": {
@@ -270,7 +270,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-09-24 17:30:00"
+            "time": "2015-11-19 04:59:49"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -388,16 +388,16 @@
             "time": "2015-01-17 02:23:40"
         },
         {
-            "name": "wpackagist-plugin/add-to-any",
-            "version": "1.6.7",
+            "name": "wpackagist-plugin/ajax-load-more",
+            "version": "2.8.3",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/add-to-any/",
-                "reference": "tags/1.6.7"
+                "url": "http://plugins.svn.wordpress.org/ajax-load-more/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/add-to-any.1.6.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/ajax-load-more.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -405,7 +405,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/add-to-any/"
+            "homepage": "https://wordpress.org/plugins/ajax-load-more/"
         },
         {
             "name": "wpackagist-plugin/akismet",
@@ -508,26 +508,6 @@
             "homepage": "https://wordpress.org/plugins/members/"
         },
         {
-            "name": "wpackagist-plugin/multiple-post-thumbnails",
-            "version": "1.6.6",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/multiple-post-thumbnails/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/multiple-post-thumbnails.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/multiple-post-thumbnails/"
-        },
-        {
             "name": "wpackagist-plugin/recent-posts-widget-extended",
             "version": "0.9.9.5",
             "source": {
@@ -549,15 +529,15 @@
         },
         {
             "name": "wpackagist-plugin/wck-custom-fields-and-custom-post-types-creator",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wck-custom-fields-and-custom-post-types-creator/",
-                "reference": "tags/1.1.6"
+                "reference": "tags/1.1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wck-custom-fields-and-custom-post-types-creator.1.1.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/wck-custom-fields-and-custom-post-types-creator.1.1.7.zip",
                 "reference": null,
                 "shasum": null
             },

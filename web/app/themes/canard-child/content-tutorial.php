@@ -15,6 +15,15 @@
 		<?php
       endif;
 
+			if ( function_exists( 'sharing_display' ) ) {
+				sharing_display( '', true );
+			}
+
+			if ( class_exists( 'Jetpack_Likes' ) ) {
+				$custom_likes = new Jetpack_Likes;
+				echo $custom_likes->post_likes( '' );
+			}
+
 		  the_content();
 
       foreach( get_cfc_meta( 'jugaad_tutorial' ) as $key => $value ){
@@ -33,6 +42,16 @@
 				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'canard' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
+
+			if ( function_exists( 'sharing_display' ) ) {
+				sharing_display( '', true );
+			}
+
+			if ( class_exists( 'Jetpack_Likes' ) ) {
+				$custom_likes = new Jetpack_Likes;
+				echo $custom_likes->post_likes( '' );
+			}
+
 		?>
 	</div><!-- .entry-content -->
 
