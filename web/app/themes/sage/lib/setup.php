@@ -95,6 +95,7 @@ function display_sidebar() {
     is_archive(),
     is_page_template('template-custom.php'),
     is_home(),
+    is_page('about-us')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

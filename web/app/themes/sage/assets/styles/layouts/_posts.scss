@@ -322,6 +322,12 @@
 .single {
   header {
     margin-bottom: 2.4rem;
+    .entry-title {
+      margin-top: 0;
+    }
+    .entry-excerpt {
+      font-size: 1.8rem;
+    }
   }
   .entry-content {
     > div {
