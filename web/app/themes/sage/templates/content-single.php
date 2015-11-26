@@ -36,6 +36,11 @@
       echo $custom_likes->post_likes( '' );
     }
     ?>
+    <?php
+    if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+        echo do_shortcode( '[jetpack-related-posts]' );
+    }
+    ?>
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>
