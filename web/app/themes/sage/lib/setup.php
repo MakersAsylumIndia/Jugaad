@@ -304,9 +304,7 @@ add_action( 'loop_start', __NAMESPACE__ . '\\jptweak_remove_share' );
 
 function jetpackme_remove_rp() {
     if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
-        $jprp = Jetpack_RelatedPosts::init();
-        $callback = array( $jprp, 'filter_add_target_to_dom' );
-        remove_filter( 'the_content', $callback, 40 );
+        remove_filter( 'the_content', array(Jetpack_RelatedPosts::init(), 'filter_add_target_to_dom'), 40 );
     }
 }
 add_filter( 'wp', __NAMESPACE__ . '\\jetpackme_remove_rp', 20 );
