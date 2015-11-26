@@ -313,7 +313,6 @@ add_filter( 'wp', __NAMESPACE__ . '\\jetpackme_remove_rp', 20 );
 
 function allow_my_post_types($allowed_post_types) {
     $allowed_post_types[] = 'jugaad_tutorials';
-    $allowed_post_types[] = 'post';
     return $allowed_post_types;
 }
 add_filter( 'rest_api_allowed_post_types', __NAMESPACE__ . '\\allow_my_post_types' );
