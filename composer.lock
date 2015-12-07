@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "afragen/github-updater",
-            "version": "5.2.0",
+            "version": "5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/afragen/github-updater.git",
-                "reference": "065f5525827e4a01d2aa39cdbb217dc15f411ce2"
+                "reference": "8f3259b196d6d731ed34069b18740dcfcafa677f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afragen/github-updater/zipball/065f5525827e4a01d2aa39cdbb217dc15f411ce2",
-                "reference": "065f5525827e4a01d2aa39cdbb217dc15f411ce2",
+                "url": "https://api.github.com/repos/afragen/github-updater/zipball/8f3259b196d6d731ed34069b18740dcfcafa677f",
+                "reference": "8f3259b196d6d731ed34069b18740dcfcafa677f",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "updater",
                 "wordpress"
             ],
-            "time": "2015-10-15 01:51:52"
+            "time": "2015-12-03 21:24:08"
         },
         {
             "name": "composer/installers",
@@ -389,7 +389,7 @@
         },
         {
             "name": "wpackagist-plugin/ajax-load-more",
-            "version": "2.8.3",
+            "version": "2.8.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/ajax-load-more/",
@@ -469,15 +469,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.8.0",
+            "version": "3.8.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.8.0"
+                "reference": "tags/3.8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.1.zip",
                 "reference": null,
                 "shasum": null
             },

@@ -1,8 +1,13 @@
 .comment-list {
   @include list-unstyled;
 }
-.comment-list ol {
+ol.comment-list {
   list-style: none;
+  li {
+    padding: 15px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
 }
 .comment-form p {
   @extend .form-group;
