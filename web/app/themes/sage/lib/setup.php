@@ -221,7 +221,7 @@ function sage_categorized_blog() {
 			'hide_empty' => 1,
 
 			// We only need to know if there is more than one category.
-			'number'     => 2,
+			'number'     => 2
 		) );
 
 		// Count the number of categories that are attached to the posts.
@@ -250,16 +250,16 @@ function sage_entry_categories() {
 	}
   if ( 'jugaad_tutorials' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_term_list( get_the_id(), 'tutorials_category'  );
+		$categories_list = wp_get_post_terms( get_the_id(), 'tutorials_category' );
 		if ( $categories_list && sage_categorized_blog() ) {
-			printf( '<div class="entry-meta"><span class="cat-links">%1$s</span></div>', $categories_list );
+			printf( '<div class="entry-meta"><span class="cat-links"><a href="%1$s">%2$s</a></span></div>', get_term_link($categories_list[0]), $categories_list[0]->name );
 		}
 	}
   if ( 'jugaad_events' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_term_list( get_the_id(), 'events_category'  );
+		$categories_list = wp_get_post_terms( get_the_id(), 'events_category' );
 		if ( $categories_list && sage_categorized_blog() ) {
-			printf( '<div class="entry-meta"><span class="cat-links">%1$s</span></div>', $categories_list );
+			printf( '<div class="entry-meta"><span class="cat-links"><a href="%1$s">%2$s</a></span></div>', get_term_link($categories_list[0]), $categories_list[0]->name );
 		}
 	}
 }
