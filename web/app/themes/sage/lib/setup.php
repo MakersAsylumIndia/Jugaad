@@ -140,7 +140,6 @@ function create_post_type() {
       'public' => true,
       'menu_position' => 4,
       'supports' => array('title', 'editor', 'publicize', 'excerpt', 'thumbnail', 'comments', 'author'),
-      'taxonomies' => array('post_tag', 'category'),
       'has_archive' => true,
       'rewrite' => array('slug' => 'do', 'with_front' => false),
       'menu_icon' => 'dashicons-hammer',
@@ -167,7 +166,6 @@ function create_post_type() {
       'public' => true,
       'menu_position' => 5,
       'supports' => array('title', 'editor', 'publicize', 'excerpt', 'thumbnail'),
-      'taxonomies' => array('post_tag', 'category'),
       'has_archive' => true,
       'rewrite' => array('slug' => 'go', 'with_front' => false),
       'menu_icon' => 'dashicons-tickets-alt',
@@ -175,6 +173,28 @@ function create_post_type() {
   );
 }
 add_action( 'init', __NAMESPACE__ . '\\create_post_type' );
+
+function create_custom_taxonomy() {
+  register_taxonomy(
+    'tutorials_category',
+    'jugaad_tutorials',
+    array(
+      'hierarchical' => true,
+      'label'        => 'Tutorial Category',
+      'query_var'    => true
+    )
+  );
+  register_taxonomy(
+    'events_category',
+    'jugaad_events',
+    array(
+      'hierarchical' => true,
+      'label'        => 'Event Category',
+      'query_var'    => true
+    )
+  );
+}
+add_action( 'init', __NAMESPACE__ . '\\create_custom_taxonomy' );
 
 function sage_has_multiple_featured_posts() {
 	$featured_posts = apply_filters( 'sage_get_featured_posts', array() );
@@ -221,9 +241,23 @@ function sage_categorized_blog() {
 
 // Prints HTML with meta information for the categories.
 function sage_entry_categories() {
-	if ( 'post' == get_post_type() || 'jugaad_events' == get_post_type() || 'jugaad_tutorials' == get_post_type() ) {
+	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'sage' ) );
+		if ( $categories_list && sage_categorized_blog() ) {
+			printf( '<div class="entry-meta"><span class="cat-links">%1$s</span></div>', $categories_list );
+		}
+	}
+  if ( 'jugaad_tutorials' == get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_term_list( get_the_id(), 'tutorials_category'  );
+		if ( $categories_list && sage_categorized_blog() ) {
+			printf( '<div class="entry-meta"><span class="cat-links">%1$s</span></div>', $categories_list );
+		}
+	}
+  if ( 'jugaad_events' == get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_term_list( get_the_id(), 'events_category'  );
 		if ( $categories_list && sage_categorized_blog() ) {
 			printf( '<div class="entry-meta"><span class="cat-links">%1$s</span></div>', $categories_list );
 		}

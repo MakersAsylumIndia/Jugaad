@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5345b4793f722027007f2a05913d30b3",
-    "content-hash": "9ac472f3ad1b1b89e36cce5604714e5e",
+    "hash": "023b1c2fa90d0880eb5a1b07b70a3349",
+    "content-hash": "ffb2c0a56323244838972ab2d3b9090a",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -526,6 +526,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/recent-posts-widget-extended/"
+        },
+        {
+            "name": "wpackagist-plugin/reveal-template",
+            "version": "3.1.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/reveal-template/",
+                "reference": "tags/3.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/reveal-template.3.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/reveal-template/"
         },
         {
             "name": "wpackagist-plugin/wck-custom-fields-and-custom-post-types-creator",

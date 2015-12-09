@@ -285,16 +285,19 @@
     .type-post {
       .entry-meta a {
         color: $read;
+        text-transform: uppercase;
       }
     }
     .type-jugaad_tutorials {
       .entry-meta a {
         color: $do;
+        text-transform: uppercase;
       }
     }
     .type-jugaad_events {
       .entry-meta a {
         color: $go;
+        text-transform: uppercase;
       }
     }
     .entry-title a,
