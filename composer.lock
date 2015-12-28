@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33e885f1fe39a43af9720b0c50a896c5",
-    "content-hash": "d894b7ccec365d9207a3af0af8965c1b",
+    "hash": "52f95ba549cb75b079c7f242d117c928",
+    "content-hash": "c11bebd3f2ff381da2656a119ce518e8",
     "packages": [
         {
             "name": "afragen/github-updater",
-            "version": "5.3.1",
+            "version": "5.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/afragen/github-updater.git",
-                "reference": "8f3259b196d6d731ed34069b18740dcfcafa677f"
+                "reference": "3785f3508ed8fef50d112a134291a2435dce8064"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afragen/github-updater/zipball/8f3259b196d6d731ed34069b18740dcfcafa677f",
-                "reference": "8f3259b196d6d731ed34069b18740dcfcafa677f",
+                "url": "https://api.github.com/repos/afragen/github-updater/zipball/3785f3508ed8fef50d112a134291a2435dce8064",
+                "reference": "3785f3508ed8fef50d112a134291a2435dce8064",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "updater",
                 "wordpress"
             ],
-            "time": "2015-12-03 21:24:08"
+            "time": "2015-12-22 03:51:31"
         },
         {
             "name": "composer/installers",
@@ -232,16 +232,16 @@
         },
         {
             "name": "roots/soil",
-            "version": "3.6.0",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/soil.git",
-                "reference": "c9e224facb851011284c3ea925980d988473fb3f"
+                "reference": "8b534d4b271033d22b8fa0d055c740f7f9c4ca58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/soil/zipball/c9e224facb851011284c3ea925980d988473fb3f",
-                "reference": "c9e224facb851011284c3ea925980d988473fb3f",
+                "url": "https://api.github.com/repos/roots/soil/zipball/8b534d4b271033d22b8fa0d055c740f7f9c4ca58",
+                "reference": "8b534d4b271033d22b8fa0d055c740f7f9c4ca58",
                 "shasum": ""
             },
             "require": {
@@ -270,7 +270,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-11-19 04:59:49"
+            "time": "2015-12-24 19:42:34"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -389,7 +389,7 @@
         },
         {
             "name": "wpackagist-plugin/ajax-load-more",
-            "version": "2.8.4",
+            "version": "2.8.5",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/ajax-load-more/",
@@ -409,15 +409,15 @@
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "3.1.5",
+            "version": "3.1.6",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.1.5"
+                "reference": "tags/3.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -469,15 +469,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.8.1",
+            "version": "3.8.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.8.1"
+                "reference": "tags/3.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.8.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -486,6 +486,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/jetpack/"
+        },
+        {
+            "name": "wpackagist-plugin/mailgun",
+            "version": "1.4.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/mailgun/",
+                "reference": "tags/1.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/mailgun.1.4.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/mailgun/"
         },
         {
             "name": "wpackagist-plugin/members",
@@ -569,15 +589,15 @@
         },
         {
             "name": "wpackagist-plugin/yikes-inc-easy-mailchimp-extender",
-            "version": "6.0.3.3",
+            "version": "6.0.3.5",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/yikes-inc-easy-mailchimp-extender/",
-                "reference": "tags/6.0.3.3"
+                "reference": "tags/6.0.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/yikes-inc-easy-mailchimp-extender.6.0.3.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/yikes-inc-easy-mailchimp-extender.6.0.3.5.zip",
                 "reference": null,
                 "shasum": null
             },

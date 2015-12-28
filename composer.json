@@ -51,7 +51,8 @@
     "roots/soil": "^3.5",
     "wpackagist-plugin/recent-posts-widget-extended": "^0.9.9.5",
     "wpackagist-plugin/force-regenerate-thumbnails": "^2.0.5",
-    "wpackagist-plugin/ajax-load-more": "^2.8.3"
+    "wpackagist-plugin/ajax-load-more": "^2.8.3",
+    "wpackagist-plugin/mailgun": "^1.4.1"
   },
   "extra": {
     "installer-paths": {
