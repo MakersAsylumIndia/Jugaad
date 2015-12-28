@@ -1,10 +1,11 @@
 <div>
   <div>
+    <?php $jugaad_editor = get_users('role=editor&orderby=post_count&order=DESC'); ?>
+    <?php if (!empty($jugaad_editor)): ?>
     <div class="col-sm-12">
       <h2>Editor</h2>
     </div>
     <div>
-      <?php $jugaad_editor = get_users('role=editor&orderby=post_count&order=DESC'); ?>
       <?php foreach($jugaad_editor as $user): ?>
       <div class="col-sm-4">
         <article <?php post_class(); ?>>
@@ -13,14 +14,16 @@
         </article>
       </div>
       <?php endforeach; ?>
+    <?php endif; ?>
     </div>
   </div>
   <div>
+    <?php $jugaad_authors = get_users('role=author&orderby=post_count&order=DESC&exclude=13'); ?>
+    <?php if (!empty($jugaad_authors)): ?>
     <div class="col-sm-12">
       <h2>Authors</h2>
     </div>
     <div>
-      <?php $jugaad_authors = get_users('role=author&orderby=post_count&order=DESC&exclude=13'); ?>
       <?php foreach($jugaad_authors as $user): ?>
       <?php if(get_the_author_meta('description', $user->ID) != ''): ?>
       <div class="col-sm-4">
@@ -31,14 +34,16 @@
       </div>
       <?php endif; ?>
       <?php endforeach; ?>
+    <?php endif; ?>
     </div>
   </div>
-  <div>
+  <div
+    <?php $jugaad_contributors = get_users('role=contributor&orderby=post_count&order=DESC'); ?>
+    <?php if (!empty($jugaad_contributors)): ?>
     <div class="col-sm-12">
       <h2>Contributors</h2>
     </div>
     <div>
-      <?php $jugaad_contributors = get_users('role=contributor&orderby=post_count&order=DESC'); ?>
       <?php foreach($jugaad_contributors as $user): ?>
       <?php if(get_the_author_meta('description', $user->ID) != ''): ?>
       <div class="col-sm-4">
@@ -49,6 +54,7 @@
       </div>
       <?php endif; ?>
       <?php endforeach; ?>
+    <?php endif; ?>
     </div>
   </div>
 </div>
